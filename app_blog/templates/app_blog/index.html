@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Entradas del blog</h1>
+    <h3 style=Color:red> Sergio González Pérez </h3>
+    <!-- Lista de publicaciones -->
+    <ul>
+        <!-- Recorre cada publicación en el contexto -->
+        {% for registroSGP in publicaciones %}
+            <li>
+                <!-- Muestra el título y la fecha de creación -->
+                <strong>{{ registroSGP.titulo }}</strong> 
+                ({{ registroSGP.fecha_de_creacion|date:"d/m/Y" }})
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
